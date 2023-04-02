@@ -1,11 +1,13 @@
+import { ReactNode } from "react";
+
 interface Props {
-  text: string;
+  children: ReactNode;
 }
 
-const Button = ({ text }: Props) => {
+const Button = ({ children }: Props) => {
   return (
     <button type="button" className="btn btn-secondary">
-      {text}
+      {children}
     </button>
   );
 };

@@ -6,23 +6,24 @@ const Dropdown = () => {
         type="button"
         data-bs-toggle="dropdown"
         aria-expanded="false"
+        style={{ width: 120 }}
       >
-        Dropdown button
+        All
       </button>
       <ul className="dropdown-menu">
         <li>
           <a className="dropdown-item" href="#">
-            Action
+            All
           </a>
         </li>
         <li>
           <a className="dropdown-item" href="#">
-            Another action
+            Incomplete
           </a>
         </li>
         <li>
           <a className="dropdown-item" href="#">
-            Something else here
+            Completed
           </a>
         </li>
       </ul>

@@ -5,20 +5,17 @@ import TodoItem from "./components/TodoItem";
 
 function App() {
   return (
-    <div className="container-md text-center">
-      <h1>TODO LIST</h1>
-      <div className="container border">
+    <div className="container-sm max-width text-center">
+      <h1 className="p-5 title">TODO LIST</h1>
+      <div className="container">
         {/* <div className="container border"> */}
         <div className="d-flex justify-content-between">
-          <div>
-            <Button text="Add Task" />
-          </div>
-          <div>
-            <Dropdown />
-          </div>
+          <button type="button" className="btn btn-secondary">
+            Add item
+          </button>
+          <Dropdown />
         </div>
-        {/* </div> */}
-        <div className="container border">
+        <div className="container px-3 py-2 mt-2 border bg-light rounded-4">
           <TodoItem
             title="Task 1"
             time={Date().toString()}
