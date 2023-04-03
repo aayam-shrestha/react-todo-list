@@ -1,4 +1,14 @@
-const Dropdown = () => {
+interface Props {
+  showAllTasks: () => void;
+  showIncompleteTasks: () => void;
+  showCompleteTasks: () => void;
+}
+
+const Dropdown = ({
+  showAllTasks,
+  showIncompleteTasks,
+  showCompleteTasks,
+}: Props) => {
   return (
     <div className="dropdown">
       <button
@@ -12,19 +22,27 @@ const Dropdown = () => {
       </button>
       <ul className="dropdown-menu">
         <li>
-          <a className="dropdown-item" href="#">
+          <option className="dropdown-item" value="All" onClick={showAllTasks}>
             All
-          </a>
+          </option>
         </li>
         <li>
-          <a className="dropdown-item" href="#">
+          <option
+            className="dropdown-item"
+            value="Incomplete"
+            onClick={showIncompleteTasks}
+          >
             Incomplete
-          </a>
+          </option>
         </li>
         <li>
-          <a className="dropdown-item" href="#">
+          <option
+            className="dropdown-item"
+            value="Complete"
+            onClick={showCompleteTasks}
+          >
             Completed
-          </a>
+          </option>
         </li>
       </ul>
     </div>

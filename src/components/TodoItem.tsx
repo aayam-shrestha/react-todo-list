@@ -10,7 +10,7 @@ interface Props {
 
 const TodoItem = ({ title, time, status }: Props) => {
   return (
-    <div className="container border rounded bg-white my-2">
+    <div className="container rounded-3 bg-white my-3">
       <div className="row align-items-center">
         <div className="col text-start">
           <div className="row align-items-center">
